@@ -33,6 +33,8 @@ public class ThemePark {
         for(IReviewed attOrStall : allAttractionsAndStalls){
             if(attOrStall instanceof ISecurity && ((ISecurity) attOrStall).isAllowedTo(visitor)){
                 allAllowed.add(attOrStall);
+            } else {
+                allAllowed.add(attOrStall); // needs to be added for rest of atts and stalls that have no user restrictions
             }
         }
         return allAllowed;
